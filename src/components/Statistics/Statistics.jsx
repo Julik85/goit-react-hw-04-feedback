@@ -2,7 +2,14 @@ import PropTypes from 'prop-types';
 import { Notification } from '../Notifications/Notifications';
 import { Value, StatsItem, StatsList } from './Statistics.styled';
 
-export function Statistics({ good, bad, neutral, total, positivePercentage, negativePercentage }) {
+export function Statistics({
+  good,
+  bad,
+  neutral,
+  total,
+  positivePercentage,
+  negativePercentage,
+}) {
   const renderStats = () => {
     return (
       <>
@@ -23,10 +30,10 @@ export function Statistics({ good, bad, neutral, total, positivePercentage, nega
             <Value>Total: {total}</Value>
           </StatsItem>
           <StatsItem>
-            <Value>Posititve Feedback: { positivePercentage }</Value>
+            <Value>Posititve Feedback: {positivePercentage}</Value>
           </StatsItem>
           <StatsItem>
-            <Value>Negative Feedback: { negativePercentage }</Value>
+            <Value>Negative Feedback: {negativePercentage}</Value>
           </StatsItem>
         </StatsList>
       </>
@@ -48,5 +55,5 @@ Statistics.propTypes = {
   bad: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
+  // positivePercentage: PropTypes.number.isRequired,
 };
